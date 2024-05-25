@@ -1,0 +1,33 @@
+app:
+  Mode: Production
+
+source:
+  Collections: a,b,c
+  CorrespondingDatabases: d,d,d
+  BatchSize: 10
+  MaxSecondsToWaitBeforeProcessing: 10
+
+sink:
+  types: kafka,elasticsearch
+
+kafka:
+  Brokers: localhost:9092
+
+elasticsearch:
+  Hosts: localhost:9200
+
+mongodb:
+  MongoURI: uristring
+  MongoUser: user
+  MongoPassword: password
+  ConnectTimeout: 30
+  MaxConnIdleTime: 180
+  MinPoolSize: 20
+  MaxPoolSize: 300
+
+logger:
+  Development: true
+  DisableCaller: false
+  DisableStacktrace: false
+  Encoding: console
+  Level: info
